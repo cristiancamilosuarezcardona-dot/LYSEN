@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LYSEN</title>
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Expanded:wght@700;900&family=Archivo:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="grain"></div>
+
+  <div class="announce-bar">Envíos nacionales · Todo Colombia</div>
+
+  <header class="topbar">
+    <a href="#top" class="logo-mark"><img src="img/logo.png" alt="LYSEN" class="logo-img"></a>
+    <nav class="nav">
+      <a href="#catalogo">Catálogo</a>
+      <a href="#marca">La marca</a>
+      <a href="#contacto">Contacto</a>
+      <a href="https://instagram.com/lysen_07" target="_blank" rel="noopener">Instagram</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <section id="top" class="hero">
+      <div class="hero-text">
+        <p class="hero-kicker">Edición limitada · Colombia</p>
+        <h1 class="hero-title">Lo que<br>llevas<br>dice todo.</h1>
+        <p class="hero-sub">LYSEN cura una selección reducida de objetos de alto nivel. Sin ruido, sin catálogo infinito — solo lo que vale la pena tener.</p>
+        <a href="#catalogo" class="btn-primary">Ver catálogo</a>
+      </div>
+      <img src="img/logo.png" alt="" class="hero-mark" aria-hidden="true">
+    </section>
+
+    <section id="catalogo" class="catalog">
+      <div class="section-head">
+        <h2>Catálogo</h2>
+        <p>Pocas referencias. Todas verificadas por nosotros antes de llegar a ti.</p>
+      </div>
+
+      <div class="tabs" role="tablist">
+        <button class="tab active" data-filter="all">Todo</button>
+        <button class="tab" data-filter="Fragancias">Fragancias</button>
+        <button class="tab" data-filter="Tecnología">Tecnología</button>
+      </div>
+
+      <div class="product-grid" id="productGrid">
+
+        <article class="product-card" data-product="mandarin-sky" data-category="Fragancias" tabindex="0">
+          <div class="product-visual" style="background-image:url('img/mandarin-sky.jpg')">
+            <span class="product-tag">Fragancias</span>
+          </div>
+          <div class="product-info">
+            <h3>Mandarin Sky</h3>
+            <p class="product-desc">Cítrico, cálido, de larga duración. Presentación en caja de marca con papel de seda y tarjeta LYSEN.</p>
+            <div class="product-foot">
+              <span class="product-price">Consultar precio</span>
+              <span class="btn-ghost">Ver detalle</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-product="one-million" data-category="Fragancias" tabindex="0">
+          <div class="product-visual" style="background-image:url('img/one-million.jpg')">
+            <span class="product-tag">Fragancias</span>
+          </div>
+          <div class="product-info">
+            <h3>One Million Lucky</h3>
+            <p class="product-desc">Dulce, ámbar, versátil para uso diario. Empaque sellado y numerado.</p>
+            <div class="product-foot">
+              <span class="product-price">Consultar precio</span>
+              <span class="btn-ghost">Ver detalle</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-product="airpods" data-category="Tecnología" tabindex="0">
+          <div class="product-visual" style="background-image:url('img/airpods.jpg')">
+            <span class="product-tag">Tecnología</span>
+          </div>
+          <div class="product-info">
+            <h3>AirPods Pro 2</h3>
+            <p class="product-desc">Cancelación de ruido activa, estuche con carga inalámbrica. Verificados antes de despacho.</p>
+            <div class="product-foot">
+              <span class="product-price">Consultar precio</span>
+              <span class="btn-ghost">Ver detalle</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-product="212-vip-black" data-category="Fragancias" tabindex="0">
+          <div class="product-visual" style="background-image:url('img/212-vip-black.jpg')">
+            <span class="product-tag">Fragancias</span>
+          </div>
+          <div class="product-info">
+            <h3>212 VIP Black</h3>
+            <p class="product-desc">Amaderado y especiado, con carácter intenso para la noche. Presentación en caja original sellada.</p>
+            <div class="product-foot">
+              <span class="product-price">Consultar precio</span>
+              <span class="btn-ghost">Ver detalle</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-product="good-girl" data-category="Fragancias" tabindex="0">
+          <div class="product-visual" style="background-image:url('img/good-girl.jpg')">
+            <span class="product-tag">Fragancias</span>
+          </div>
+          <div class="product-info">
+            <h3>Good Girl</h3>
+            <p class="product-desc">Floral con fondo de cacao y haba tonka. Elegante, seductor, de muy buena duración.</p>
+            <div class="product-foot">
+              <span class="product-price">Consultar precio</span>
+              <span class="btn-ghost">Ver detalle</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-product="ysl-myself" data-category="Fragancias" tabindex="0">
+          <div class="product-visual" style="background-image:url('img/ysl-myself.jpg')">
+            <span class="product-tag">Fragancias</span>
+          </div>
+          <div class="product-info">
+            <h3>YSL Le Parfum</h3>
+            <p class="product-desc">Cítrico y floral con fondo amaderado, versión intensa. Frasco recargable, edición actual.</p>
+            <div class="product-foot">
+              <span class="product-price">Consultar precio</span>
+              <span class="btn-ghost">Ver detalle</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="marca" class="brand-statement">
+      <p>
+        LYSEN no vende volumen. Vendemos criterio: menos referencias, más control de calidad,
+        y un empaque que se siente como lo que es — algo que elegiste tú, no algo que te vendieron.
+      </p>
+    </section>
+
+    <section id="contacto" class="contact">
+      <div class="section-head">
+        <h2>Habla con nosotros</h2>
+        <p>Sin carritos, sin filas. Escríbenos y cerramos el pedido directamente.</p>
+      </div>
+      <a href="https://wa.me/573202515698" target="_blank" rel="noopener" class="btn-whatsapp">
+        Escribir por WhatsApp
+      </a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span class="logo-mark small"><img src="img/logo.png" alt="LYSEN" class="logo-img"></span>
+    <div class="footer-links">
+      <a href="https://instagram.com/lysen_07" target="_blank" rel="noopener">@lysen_07</a>
+      <a href="https://wa.me/573202515698" target="_blank" rel="noopener">320 251 5698</a>
+    </div>
+    <p>© 2026 LYSEN. Todos los derechos reservados.</p>
+  </footer>
+
+  <a href="https://wa.me/573202515698" target="_blank" rel="noopener" class="floating-wa" aria-label="Escribir por WhatsApp">
+    WhatsApp
+  </a>
+
+  <div class="modal-overlay" id="productModal">
+    <div class="modal-card">
+      <button class="modal-close" id="modalClose" aria-label="Cerrar">✕</button>
+      <div class="modal-visual" id="modalVisual"></div>
+      <div class="modal-body">
+        <span class="product-tag" id="modalTag"></span>
+        <h3 id="modalTitle"></h3>
+        <p id="modalDesc"></p>
+        <p class="modal-note" id="modalNote"></p>
+        <a href="https://wa.me/573202515698" target="_blank" rel="noopener" class="btn-primary" id="modalWa">
+          Pedir por WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const PRODUCTS = {
+      "mandarin-sky": {
+        tag: "Fragancias",
+        title: "Mandarin Sky",
+        img: "img/mandarin-sky.jpg",
+        desc: "Cítrico, cálido, de larga duración. Notas de mandarina y fondo amaderado suave — ideal para uso diario.",
+        note: "Presentación en caja de marca LYSEN, con papel de seda y tarjeta de agradecimiento."
+      },
+      "one-million": {
+        tag: "Fragancias",
+        title: "One Million Lucky",
+        img: "img/one-million.jpg",
+        desc: "Dulce, ámbar, versátil. Una fragancia pensada para durar todo el día sin saturar.",
+        note: "Empaque sellado y verificado antes de despacho. Envío discreto."
+      },
+      "airpods": {
+        tag: "Tecnología",
+        title: "AirPods Pro 2",
+        img: "img/airpods.jpg",
+        desc: "Cancelación activa de ruido, estuche con carga inalámbrica, calidad de audio premium.",
+        note: "Cada unidad se prueba antes de salir — batería, conexión y sonido verificados."
+      },
+      "212-vip-black": {
+        tag: "Fragancias",
+        title: "212 VIP Black",
+        img: "img/212-vip-black.jpg",
+        desc: "Amaderado y especiado, con carácter intenso pensado para la noche.",
+        note: "Caja original sellada. Empaque LYSEN con tarjeta de agradecimiento incluida."
+      },
+      "good-girl": {
+        tag: "Fragancias",
+        title: "Good Girl",
+        img: "img/good-girl.jpg",
+        desc: "Floral con fondo de cacao y haba tonka. Elegante y seductor, de muy buena duración.",
+        note: "Empaque sellado y verificado antes de despacho."
+      },
+      "ysl-myself": {
+        tag: "Fragancias",
+        title: "YSL Le Parfum",
+        img: "img/ysl-myself.jpg",
+        desc: "Cítrico y floral con fondo amaderado, en su versión más intensa.",
+        note: "Frasco recargable, edición actual. Verificado antes de despacho."
+      }
+    };
+
+    const modal = document.getElementById('productModal');
+    const modalVisual = document.getElementById('modalVisual');
+    const modalTag = document.getElementById('modalTag');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalDesc = document.getElementById('modalDesc');
+    const modalNote = document.getElementById('modalNote');
+
+    function openModal(key) {
+      const p = PRODUCTS[key];
+      if (!p) return;
+      modalVisual.style.backgroundImage = `url('${p.img}')`;
+      modalTag.textContent = p.tag;
+      modalTitle.textContent = p.title;
+      modalDesc.textContent = p.desc;
+      modalNote.textContent = p.note;
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      modal.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('.product-card').forEach(card => {
+      card.addEventListener('click', () => openModal(card.dataset.product));
+      card.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') openModal(card.dataset.product);
+      });
+    });
+
+    document.querySelectorAll('.tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const filter = tab.dataset.filter;
+        document.querySelectorAll('.product-card').forEach(card => {
+          const show = filter === 'all' || card.dataset.category === filter;
+          card.style.display = show ? '' : 'none';
+        });
+      });
+    });
+
+    document.getElementById('modalClose').addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+    });
+  </script>
+
+</body>
+</html>
