@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sleep More</title>
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Figtree:wght@400;500;600&display=swap">
@@ -33,8 +35,9 @@ p { margin: 0; }
 :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 8px; }
 
 .topbar { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; padding-block: 8px 20px; }
-.brand { display: flex; align-items: center; gap: 10px; font-family: var(--font-display); font-weight: 700; font-size: 1.2rem; }
-.brand img { width: 34px; height: 34px; }
+.brand { display: block; width: 74px; height: auto; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .invertible { filter: invert(1); } }
+:root[data-theme="dark"] .invertible { filter: invert(1); }
 .links { display: flex; gap: 10px; flex-wrap: wrap; }
 .pill { text-decoration: none; font-weight: 600; font-size: 0.93rem; padding: 10px 16px; border-radius: 999px; background: var(--surface); box-shadow: inset 0 0 0 1.5px var(--line); color: var(--ink); }
 
@@ -81,7 +84,7 @@ footer { padding-top: 36px; font-size: 0.88rem; color: var(--muted); display: fl
 <body>
 <div class="wrap">
   <div class="topbar">
-    <div class="brand"><img src="sleepmore-logo.svg" alt=""><span>Sleep More</span></div>
+    <img class="brand invertible" src="marca-sleepmore.png" alt="Sleep More">
     <div class="links">
       <a class="pill" href="../inicio/">← Volver</a>
       <a class="pill" href="https://cristiancamilosuarezcardona-dot.github.io/LYSEN/">Ir a LYSEN →</a>

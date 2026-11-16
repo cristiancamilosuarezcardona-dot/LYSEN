@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>LYSEN y Sleep More</title>
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap">
@@ -18,8 +20,6 @@
   --btn: #2B2D2F;
   --btn-ink: #F4F3F0;
   --font: "Figtree", "Segoe UI", system-ui, sans-serif;
-  /* Si tu logo de LYSEN es BLANCO y no se ve, cambia esta línea a: invert(1) */
-  --lysen-logo-filter: none;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
@@ -39,12 +39,13 @@ h1 { margin: 0 0 8px; font-size: clamp(1.9rem, 6vw, 2.8rem); line-height: 1.1; t
 .doors { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
 .door { display: grid; grid-template-rows: auto auto; gap: 18px; text-decoration: none; color: inherit; background: var(--plate); border-radius: 28px; padding: 18px 18px 22px; box-shadow: inset 0 0 0 1.5px var(--plate-line); min-width: 0; }
 .door:focus-visible { outline: 3px solid var(--ink); outline-offset: 4px; }
-.logo-box { --box-h: clamp(190px, 34vw, 300px); height: var(--box-h); display: grid; place-items: center; padding: 20px; border-radius: 20px; overflow: hidden; position: relative; }
-.logo-box img { max-width: 78%; max-height: calc(var(--box-h) - 40px); object-fit: contain; display: block; }
-.door-lysen .logo-box img { filter: var(--lysen-logo-filter); }
-.fallback { display: none; font-weight: 700; font-size: clamp(2rem, 6vw, 3rem); letter-spacing: 0.12em; }
-.no-logo img { display: none; }
-.no-logo .fallback { display: block; }
+.logo-box { --box-h: clamp(190px, 34vw, 300px); height: var(--box-h); display: grid; place-items: center; padding: 20px; border-radius: 20px; overflow: hidden; }
+/* Los logos son PNG negros con fondo transparente; en modo oscuro se invierten a blanco. */
+.mark { display: block; height: calc(var(--box-h) - 64px); width: auto; max-width: 82%; object-fit: contain; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .invertible { filter: invert(1); } }
+:root[data-theme="dark"] .invertible { filter: invert(1); }
+.corner { display: flex; align-items: center; padding-bottom: 20px; }
+.corner img { width: 40px; height: 40px; border-radius: 50%; display: block; }
 .info { display: grid; gap: 10px; padding-inline: 6px; }
 .info .what { color: var(--muted); font-size: 0.95rem; }
 .go { display: inline-block; width: fit-content; background: var(--btn); color: var(--btn-ink); font-weight: 600; padding: 12px 22px; border-radius: 999px; transition: transform .2s ease; }
@@ -57,16 +58,14 @@ h1 { margin: 0 0 8px; font-size: clamp(1.9rem, 6vw, 2.8rem); line-height: 1.1; t
 </head>
 <body>
 <div class="wrap">
+  <div class="corner"><img src="favicon.png" alt="LYSEN y Sleep More" width="40" height="40"></div>
   <h1>¿A dónde quieres entrar?</h1>
   <p class="sub">Elige según lo que estás buscando. Los pedidos se atienden por WhatsApp.</p>
 
   <div class="doors">
-    <!-- LYSEN: enlaza a tu página actual, sin cambiarla. Pon tu logo aquí al lado como lysen-logo.png -->
+    <!-- LYSEN: enlaza a tu página actual, sin cambiarla. -->
     <a class="door door-lysen" href="https://cristiancamilosuarezcardona-dot.github.io/LYSEN/">
-      <div class="logo-box" id="box-lysen">
-        <img src="lysen-logo.png" alt="Logo de LYSEN">
-        <span class="fallback">LYSEN</span>
-      </div>
+      <div class="logo-box"><img class="mark invertible" src="marca-lysen.png" alt="Logo de LYSEN"></div>
       <div class="info">
         <span class="what">Fragancias y tecnología</span>
         <span class="go">Entrar a LYSEN →</span>
@@ -74,10 +73,7 @@ h1 { margin: 0 0 8px; font-size: clamp(1.9rem, 6vw, 2.8rem); line-height: 1.1; t
     </a>
 
     <a class="door door-sleep" href="../sleepmore/">
-      <div class="logo-box" id="box-sleep">
-        <img src="sleepmore-logo.svg" alt="Logo de Sleep More">
-        <span class="fallback">Sleep More</span>
-      </div>
+      <div class="logo-box"><img class="mark invertible" src="marca-sleepmore.png" alt="Logo de Sleep More"></div>
       <div class="info">
         <span class="what">Sueño y relajación</span>
         <span class="go">Entrar a Sleep More →</span>
@@ -87,14 +83,5 @@ h1 { margin: 0 0 8px; font-size: clamp(1.9rem, 6vw, 2.8rem); line-height: 1.1; t
 
   <p class="contact">¿Dudas? Escríbenos por WhatsApp: <a href="https://wa.me/573202515698?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n." target="_blank" rel="noopener">320 251 5698</a></p>
 </div>
-<script>
-  /* Si un logo no carga, se muestra el nombre en texto para que la portada nunca quede vacía. */
-  ['box-lysen', 'box-sleep'].forEach(function (id) {
-    var box = document.getElementById(id), img = box.querySelector('img');
-    function miss() { box.classList.add('no-logo'); }
-    img.addEventListener('error', miss);
-    if (img.complete && img.naturalWidth === 0) miss();
-  });
-</script>
 </body>
 </html>
